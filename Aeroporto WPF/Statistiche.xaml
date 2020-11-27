@@ -1,0 +1,33 @@
+﻿<Window x:Class="Aeroporto_WPF.Statistiche"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Aeroporto_WPF"
+        mc:Ignorable="d"
+        Title="Statistiche" Height="591.6" Width="800">
+    <Grid Margin="0,0,-0.4,7.4">
+        <Label x:Name="lblAereoPiuVoli" Content="Aereo/i con il maggior numero di voli" HorizontalAlignment="Left" Margin="45,37,0,0" VerticalAlignment="Top" Width="430"/>
+        <Label x:Name="lblVoliPiuPasseggeri" Content="Volo/i con il maggior numero di  passeggeri" HorizontalAlignment="Left" Margin="45,87,0,0" VerticalAlignment="Top" Width="430"/>
+        <Label x:Name="lblVoliMarconi" Content="Voli arrivati al Marconi " HorizontalAlignment="Left" Margin="45,135,0,0" VerticalAlignment="Top" Width="430"/>
+        <Label x:Name="lblVoliConPilota" Content="Voli con piloti a bordo" HorizontalAlignment="Left" Margin="45,181,0,0" VerticalAlignment="Top" Width="430"/>
+        <Label x:Name="lblVoliPiuIncasso" Content="Volo/i con maggior incasso" HorizontalAlignment="Left" Margin="45,229,0,0" VerticalAlignment="Top" Width="430"/>
+        <ListView HorizontalAlignment="Left" Height="218" Margin="45,313,0,0" VerticalAlignment="Top" Width="526">
+            <ListView.View>
+                <GridView ColumnHeaderStringFormat="">
+                    <GridView.ColumnHeaderContextMenu>
+                        <ContextMenu/>
+                    </GridView.ColumnHeaderContextMenu>
+                    <GridViewColumn Header="Nome" Width="67"/>
+                    <GridViewColumn Header="Cognome" Width="77"/>
+                    <GridViewColumn Header="Codice Volo" Width="79"/>
+                    <GridViewColumn Header="Codice Biglietto" Width="99"/>
+                    <GridViewColumn Header="Codice Aeroporto" Width="99"/>
+                    <GridViewColumn Header="Marca Aereo" Width="99"/>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+    </Grid>
+</Window>

@@ -1,0 +1,15 @@
+﻿<Window x:Class="Aeroporto_WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Aeroporto_WPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Button x:Name="btnCaricamentoDati" Content="CARICAMENTO DATI" HorizontalAlignment="Left" Margin="135,120,0,0" VerticalAlignment="Top" Width="208" Height="55"/>
+        <Button x:Name="btnVisualizzaAerei" Content="VISUALIZZA AEREI" HorizontalAlignment="Left" Margin="485,120,0,0" VerticalAlignment="Top" Width="208" Height="55"/>
+        <Button x:Name="btnStatistiche" Content="STATISTICHE" HorizontalAlignment="Left" Margin="135,225,0,0" VerticalAlignment="Top" Width="208" Height="59"/>
+
+    </Grid>
+</Window>
