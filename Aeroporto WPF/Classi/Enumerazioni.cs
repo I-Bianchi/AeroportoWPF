@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Aeroporto_WPF.Classi
 {
-    class Enumerazioni
+    public class Enumerazioni
     {
         public enum TipoDocumento
         {

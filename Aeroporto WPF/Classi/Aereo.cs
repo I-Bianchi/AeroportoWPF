@@ -8,7 +8,7 @@ using static Aeroporto_WPF.Classi.Enumerazioni;
 
 namespace Aeroporto_WPF.Classi
 {
-    class Aereo
+    public class Aereo
     {
         public string Marca { get; set; }
         public string Modello { get; set; }

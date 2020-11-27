@@ -7,7 +7,7 @@ using static Aeroporto_WPF.Classi.Enumerazioni;
 
 namespace Aeroporto_WPF.Classi
 {
-    class Persona
+    public class Persona
     {
         public string Nome { get; set; }
         public string Cognome { get; set; }

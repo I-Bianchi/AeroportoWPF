@@ -7,7 +7,7 @@ using static Aeroporto_WPF.Classi.Enumerazioni;
 
 namespace Aeroporto_WPF.Classi
 {
-    class Volo
+    public class Volo
     {
 
         public DateTime DataOraPartenza { get; set; }
