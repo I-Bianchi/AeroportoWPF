@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using static Aeroporto_WPF.Classi.Enumerazioni;
 
+
 namespace Aeroporto_WPF.Classi
 {
     class Aereo
