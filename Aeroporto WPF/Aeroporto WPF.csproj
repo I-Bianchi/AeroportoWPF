@@ -55,6 +55,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Classi\Aereo.cs" />
+    <Compile Include="Classi\Aeroporto.cs" />
+    <Compile Include="Classi\Biglietto.cs" />
+    <Compile Include="Classi\Enumerazioni.cs" />
+    <Compile Include="Classi\Persona.cs" />
+    <Compile Include="Classi\Volo.cs" />
     <Compile Include="Statistiche.xaml.cs">
       <DependentUpon>Statistiche.xaml</DependentUpon>
     </Compile>

@@ -5,14 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Aeroporto_WPF"
         mc:Ignorable="d"
-        Title="Statistiche" Height="591.6" Width="800">
+        Title="Statistiche" Height="591.6" Width="800" Loaded="Window_Loaded">
     <Grid Margin="0,0,-0.4,7.4">
-        <Label x:Name="lblAereoPiuVoli" Content="Aereo/i con il maggior numero di voli" HorizontalAlignment="Left" Margin="45,37,0,0" VerticalAlignment="Top" Width="430"/>
-        <Label x:Name="lblVoliPiuPasseggeri" Content="Volo/i con il maggior numero di  passeggeri" HorizontalAlignment="Left" Margin="45,87,0,0" VerticalAlignment="Top" Width="430"/>
-        <Label x:Name="lblVoliMarconi" Content="Voli arrivati al Marconi " HorizontalAlignment="Left" Margin="45,135,0,0" VerticalAlignment="Top" Width="430"/>
-        <Label x:Name="lblVoliConPilota" Content="Voli con piloti a bordo" HorizontalAlignment="Left" Margin="45,181,0,0" VerticalAlignment="Top" Width="430"/>
-        <Label x:Name="lblVoliPiuIncasso" Content="Volo/i con maggior incasso" HorizontalAlignment="Left" Margin="45,229,0,0" VerticalAlignment="Top" Width="430"/>
-        <ListView HorizontalAlignment="Left" Height="218" Margin="45,313,0,0" VerticalAlignment="Top" Width="526">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="472*"/>
+            <ColumnDefinition Width="75*"/>
+            <ColumnDefinition Width="247*"/>
+        </Grid.ColumnDefinitions>
+        <Label x:Name="lblAereoPiuVoli" Content="Aereo/i con il maggior numero di voli" HorizontalAlignment="Left" Margin="45,37,0,0" VerticalAlignment="Top" Width="430" Grid.ColumnSpan="2"/>
+        <Label x:Name="lblVoliPiuPasseggeri" Content="Volo/i con il maggior numero di  passeggeri" HorizontalAlignment="Left" Margin="45,87,0,0" VerticalAlignment="Top" Width="430" Grid.ColumnSpan="2"/>
+        <Label x:Name="lblVoliMarconi" Content="Voli arrivati al Marconi " HorizontalAlignment="Left" Margin="45,135,0,0" VerticalAlignment="Top" Width="430" Grid.ColumnSpan="2"/>
+        <Label x:Name="lblVoliConPilota" Content="Voli con piloti a bordo" HorizontalAlignment="Left" Margin="45,181,0,0" VerticalAlignment="Top" Width="430" Grid.ColumnSpan="2"/>
+        <Label x:Name="lblVoliPiuIncasso" Content="Volo/i con maggior incasso" HorizontalAlignment="Left" Margin="45,229,0,0" VerticalAlignment="Top" Width="430" Grid.ColumnSpan="2"/>
+        <ListView HorizontalAlignment="Left" Height="218" Margin="45,313,0,0" VerticalAlignment="Top" Width="526" Grid.ColumnSpan="3">
             <ListView.View>
                 <GridView ColumnHeaderStringFormat="">
                     <GridView.ColumnHeaderContextMenu>
