@@ -144,7 +144,7 @@ namespace Aeroporto_WPF
                     MarconiCount++;
                 }
             }
-            lblVoliMarconi.Content += MarconiCount;
+            lblVoliMarconi.Content = lblVoliMarconi.Content + Convert.ToString(MarconiCount);
 
             // Voli con pilota a bordo
             int VoliConPilota = 0;
@@ -156,7 +156,7 @@ namespace Aeroporto_WPF
                     VoliConPilota++;
                 }
             }
-            lblVoliConPilota.Text += VoliConPilota;
+            lblVoliConPilota.Content += Convert.ToString(VoliConPilota);
 
             // Volo/i con maggiore incasso
             // Dichiaro e inizializzo l'HashTable
@@ -190,27 +190,33 @@ namespace Aeroporto_WPF
             {
                 if (Convert.ToInt32(item.Value) == Max3)
                 {
-                    lblVoliPiuIncasso.Text = lblVoliPiuIncasso.Text + " " + item.Key;
+                    lblVoliPiuIncasso.Content = lblVoliPiuIncasso.Content + " " + item.Key;
                 }
             }
 
 
-            // NOME COGNOME CODICEVOLO CODICEBIGLIETTO AEROPORTOARRIVO MARCAAEREO
+            //NOME COGNOME CODICEVOLO CODICEBIGLIETTO AEROPORTOARRIVO MARCAAEREO
 
 
 
             foreach (Biglietto item in MieiBiglietti)
             {
-                ListViewItem lvi = new ListViewItem(item.PersonaBiglietto.Nome);
-                lvi.SubItems.Add(item.PersonaBiglietto.Cognome);
-                lvi.SubItems.Add(item.VoloBiglietto.Codice);
-                lvi.SubItems.Add(item.Codice);
-                lvi.SubItems.Add(item.VoloBiglietto.AereoportoVolo.Nome);
-                lvi.SubItems.Add(item.VoloBiglietto.AereoVolo.Marca);
-                lstBiglietti.Items.Add(lvi);
-            }
+
+
+                ListViewItem lvi = new ListViewItem();//(item.PersonaBiglietto.Nome, 0);
+
+
+            //    lvi.Content(item.PersonaBiglietto.Cognome);
+            //    lvi.SubItems.Add(item.VoloBiglietto.Codice);
+            //    lvi.SubItems.Add(item.Codice);
+            //    lvi.SubItems.Add(item.VoloBiglietto.AereoportoVolo.Nome);
+            //    lvi.SubItems.Add(item.VoloBiglietto.AereoVolo.Marca);
+            //    lstBiglietti.Items.Add(lvi);
+            //}
 
 
         }
+        }
+
     }
 }
