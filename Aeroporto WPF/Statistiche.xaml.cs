@@ -192,14 +192,7 @@ namespace Aeroporto_WPF
 
             foreach (Biglietto item in MieiBiglietti)
             {
-
-
-
-
                 bigliettiDaPassare.Add(new BigliettiDaPassare() { Nome = item.PersonaBiglietto.Nome, Cognome = item.PersonaBiglietto.Cognome, CodiceVolo = item.VoloBiglietto.Codice, CodiceBiglietto = item.Codice, CodiceAeroporto = item.VoloBiglietto.AereoportoVolo.Nome, MarcaAereo = item.VoloBiglietto.AereoVolo.Marca });
-
-
-
             }
 
             lstBiglietti.ItemsSource = bigliettiDaPassare;
