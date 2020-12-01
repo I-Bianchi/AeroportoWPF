@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Aeroporto_WPF"
         mc:Ignorable="d"
         Title="Statistiche" Height="591.6" Width="800" Loaded="Window_Loaded">
-    <Grid Margin="0,0,-0.4,7.4">
+    <Grid Margin="0,0,-0.4,7.4" Loaded="Grid_Loaded">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition Width="0*"/>
@@ -17,19 +17,19 @@
         <Label x:Name="lblVoliMarconi" Content="Voli arrivati al Marconi " HorizontalAlignment="Left" Margin="45,135,0,0" VerticalAlignment="Top" Width="430" Height="26"/>
         <Label x:Name="lblVoliConPilota" Content="Voli con piloti a bordo" HorizontalAlignment="Left" Margin="45,181,0,0" VerticalAlignment="Top" Width="430" Height="26"/>
         <Label x:Name="lblVoliPiuIncasso" Content="Volo/i con maggior incasso" HorizontalAlignment="Left" Margin="45,229,0,0" VerticalAlignment="Top" Width="430" Height="26"/>
-        <ListView HorizontalAlignment="Left" Height="218" Margin="45,313,0,0" VerticalAlignment="Top" Width="526">
+        <ListView x:Name="lstBiglietti" HorizontalAlignment="Left" Height="218" Margin="45,313,0,0" VerticalAlignment="Top" Width="598">
             <ListView.View>
                 <GridView ColumnHeaderStringFormat="">
                     <GridView.ColumnHeaderContextMenu>
                         <ContextMenu/>
                     </GridView.ColumnHeaderContextMenu>
-                    <GridViewColumn Header="Nome" Width="67"/>
-                    <GridViewColumn Header="Cognome" Width="77"/>
-                    <GridViewColumn Header="Codice Volo" Width="79"/>
-                    <GridViewColumn Header="Codice Biglietto" Width="99"/>
-                    <GridViewColumn Header="Codice Aeroporto" Width="99"/>
-                    <GridViewColumn Header="Marca Aereo" Width="99"/>
-                    <GridViewColumn/>
+                    <GridViewColumn Header="Nome" Width="67" DisplayMemberBinding="{Binding Nome}"/>
+                    <GridViewColumn Header="Cognome" Width="77" DisplayMemberBinding="{Binding Cognome}"/>
+                    <GridViewColumn Header="Codice Volo" Width="79" DisplayMemberBinding="{Binding CodiceVolo}"/>
+                    <GridViewColumn Header="Codice Biglietto" Width="99" DisplayMemberBinding="{Binding CodiceBiglietto}"/>
+                    <GridViewColumn Header="Aeroporto" Width="150" DisplayMemberBinding="{Binding CodiceAeroporto}"/>
+                    <GridViewColumn Header="Marca Aereo" Width="99" DisplayMemberBinding="{Binding MarcaAereo}"/>
+
                 </GridView>
             </ListView.View>
 

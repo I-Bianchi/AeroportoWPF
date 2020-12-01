@@ -57,6 +57,7 @@
     </ApplicationDefinition>
     <Compile Include="Classi\Aereo.cs" />
     <Compile Include="Classi\Aeroporto.cs" />
+    <Compile Include="Classi\BigliettiDaPassare.cs" />
     <Compile Include="Classi\Biglietto.cs" />
     <Compile Include="Classi\Enumerazioni.cs" />
     <Compile Include="Classi\Persona.cs" />

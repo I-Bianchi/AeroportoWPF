@@ -1,18 +1,8 @@
-﻿using System;
+﻿using Aeroporto_WPF.Classi;
+using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
-using Aeroporto_WPF.Classi;
 
 namespace Aeroporto_WPF
 {
@@ -198,25 +188,32 @@ namespace Aeroporto_WPF
             //NOME COGNOME CODICEVOLO CODICEBIGLIETTO AEROPORTOARRIVO MARCAAEREO
 
 
+            List<BigliettiDaPassare> bigliettiDaPassare = new List<BigliettiDaPassare>();
 
             foreach (Biglietto item in MieiBiglietti)
             {
 
 
-                ListViewItem lvi = new ListViewItem();//(item.PersonaBiglietto.Nome, 0);
 
 
-            //    lvi.Content(item.PersonaBiglietto.Cognome);
-            //    lvi.SubItems.Add(item.VoloBiglietto.Codice);
-            //    lvi.SubItems.Add(item.Codice);
-            //    lvi.SubItems.Add(item.VoloBiglietto.AereoportoVolo.Nome);
-            //    lvi.SubItems.Add(item.VoloBiglietto.AereoVolo.Marca);
-            //    lstBiglietti.Items.Add(lvi);
-            //}
+                bigliettiDaPassare.Add(new BigliettiDaPassare() { Nome = item.PersonaBiglietto.Nome, Cognome = item.PersonaBiglietto.Cognome, CodiceVolo = item.VoloBiglietto.Codice, CodiceBiglietto = item.Codice, CodiceAeroporto = item.VoloBiglietto.AereoportoVolo.Nome, MarcaAereo = item.VoloBiglietto.AereoVolo.Marca });
+
+
+
+            }
+
+            lstBiglietti.ItemsSource = bigliettiDaPassare;
+
 
 
         }
+
+        private void Grid_Loaded(object sender, RoutedEventArgs e)
+        {
+
         }
 
     }
+
+
 }
